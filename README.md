@@ -3,3 +3,6 @@ This Portfolio is a collection of projects I have completed across the fields of
 
 - **Email**: [beckettschlag@gmail.com](beckettschlag@gmail.com)
 - **LinkedIn**: [linkedin.com/in/beckettschlag](https://www.linkedin.com/in/beckettschlag/)
+
+## Certifications
+- Google Data Analytics Certification
