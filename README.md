@@ -6,3 +6,6 @@ This Portfolio is a collection of projects I have completed across the fields of
 
 ## Certifications
 - Google Data Analytics Certification
+
+## Projects
+**[COVID-19 Data Exploration](https://github.com/beckettschlag/PortfolioProjects/blob/main/COVID-19%20Data%20Exploration.sql)**
