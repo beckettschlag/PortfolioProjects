@@ -55,6 +55,7 @@ From this, we learn a number of things:
 - A variety of small, medium, and large businesses are employing data scientists.
 
 We also learn that there are a number of columns that will not be useful to our exploration and there are repeated rows. There's also multiple values that could be more meaningful for our exploration. Let's remove the unused columns/rows, remove rows with duplicated data, and rename the values to be more meaningful.
+```
 # Removing the redundant 'Unnamed: 0' column
 df.drop('Unnamed: 0', axis=1, inplace=True)
 #print(df.head())
