@@ -53,3 +53,62 @@ From this, we learn a number of things:
 - This data categorizes remote percentage as In-Person, Hybrid, or Onsite with the corresponding values of 0, 50, or 100 respectively.
 - Companies employing data scientists are located all over the world.
 - A variety of small, medium, and large businesses are employing data scientists.
+
+We also learn that there are a number of columns that will not be useful to our analysis and there are repeated rows. So let's remove the duplicated rows, unused columns and remname the columns to have more meaning for our explorations.
+```
+# Removing the redundant 'Unnamed: 0' column
+df.drop('Unnamed: 0', axis=1, inplace=True)
+#print(df.head())
+
+
+# Removing salary and salary_currency column and renaming salary_in_usd to salary
+df.drop(['salary', 'salary_currency'], axis=1, inplace=True)
+df.rename(columns={'salary_in_usd': 'salary'}, inplace=True)
+
+
+# Removing duplicate rows of data (42 rows)
+#print(df.duplicated().sum())
+df.drop_duplicates(inplace=True)
+
+# Changing country names in country_location and employee_residence from abbreviations to full country names
+coco = cc.CountryConverter()
+df['employee_residence'] = coco.convert(df['employee_residence'], to='name_short')
+df['company_location'] = coco.convert(df['company_location'], to='name_short')
+#print(df.head())
+
+# Changing company_size from abbreviated to extended values
+#print(df['company_size'].value_counts())
+df['company_size'] = df['company_size'].map({
+    'S': 'Small',
+    'M': 'Medium',
+    'L': 'Large'
+
+})
+#print(df.head())
+
+
+# Changing experience_level from abbreviated to extended values
+#print(df['experience_level'].value_counts())
+df['experience_level'] = df['experience_level'].map({
+    'EN': 'Entry-Level',
+    'MI': 'Mid-Level',
+    'SE': 'Senior-Level',
+    'EX': 'Executive-Level'
+
+})
+
+
+# Changing employment_type from abbreviated to extended values
+#print(df['employment_type'].value_counts())
+df['employment_type'] = df['employment_type'].map({
+    'FL': 'Freelance',
+    'CT': 'Contract',
+    'PT': 'Part-Time',
+    'FT': 'Full-Time'
+
+})
+
+
+# Changing remote ratio to remote percentage
+df.rename(columns={'remote_ratio': 'remote_percentage'}, inplace=True)
+```
