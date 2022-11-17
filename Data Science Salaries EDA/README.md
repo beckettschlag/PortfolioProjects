@@ -42,14 +42,14 @@ print('Unique values from company_size: \n', df.company_size.unique())
 ```
 
 From this, we learn a number of things: 
--This data includes data science salary information from 2019-2022.
--Experience level is categorized into four values:
-  -EN - 'Entry-Level'
-  -MI - 'Mid-Level'
-  -SE - 'Senior-Level'
-  -EX - Executive Level
--There are many unique job titles within the dataset.
--People working in data science live all over the world.
--This data categorizes remote percentage as In-Person, Hybrid, or Onsite with the corresponding values of 0, 50, or 100 respectively.
--Companies employing data scientists are located all over the world.
--A variety of small, medium, and large businesses are employing data scientists.
+- This data includes data science salary information from 2019-2022.
+- Experience level is categorized into four values:
+  - EN - 'Entry-Level'
+  - MI - 'Mid-Level'
+  - SE - 'Senior-Level'
+  - EX - Executive Level
+- There are many unique job titles within the dataset.
+- People working in data science live all over the world.
+- This data categorizes remote percentage as In-Person, Hybrid, or Onsite with the corresponding values of 0, 50, or 100 respectively.
+- Companies employing data scientists are located all over the world.
+- A variety of small, medium, and large businesses are employing data scientists.
