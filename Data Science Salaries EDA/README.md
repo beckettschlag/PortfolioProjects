@@ -54,8 +54,7 @@ From this, we learn a number of things:
 - Companies employing data scientists are located all over the world.
 - A variety of small, medium, and large businesses are employing data scientists.
 
-We also learn that there are a number of columns that will not be useful to our analysis and there are repeated rows. So let's remove the duplicated rows, unused columns and remname the columns to have more meaning for our explorations.
-```
+We also learn that there are a number of columns that will not be useful to our exploration and there are repeated rows. There's also multiple values that could be more meaningful for our exploration. Let's remove the unused columns/rows, remove rows with duplicated data, and rename the values to be more meaningful.
 # Removing the redundant 'Unnamed: 0' column
 df.drop('Unnamed: 0', axis=1, inplace=True)
 #print(df.head())
@@ -111,4 +110,22 @@ df['employment_type'] = df['employment_type'].map({
 
 # Changing remote ratio to remote percentage
 df.rename(columns={'remote_ratio': 'remote_percentage'}, inplace=True)
+```
+
+Now that we have ensured our data is clean and meaninful, we can begin our exploration.
+
+## Exploring the data
+
+First, let's create a graph that visualizes the top 15 countries with the most remote workers.
+```
+sns.set_palette('autumn')
+sns.set_style('whitegrid')
+
+top_remote_locations = df.groupby('company_location')['remote_percentage'].mean().sort_values(ascending=False)[:20]
+
+plt.figure(figsize=(15, 6))
+
+ax = sns.barplot(y=top_remote_locations.index, x=top_remote_locations, palette='autumn')
+ax.set_title('Countries With Most Remote Workers', fontdict={'fontsize': 14})
+plt.show()
 ```
