@@ -7,8 +7,8 @@ Data Science is the practice of using data to extract meaningful insights. It is
 
 ## Questions seeking answers:
 - What countries have the most remote workers?
+- Does experience level correlate with remote percentage?
 - Are people who work remotely paid more?
-- How have remote percentages changed?
 - Have salary levels changed as the remote percentage has?
 - Is there a relationship between job type and experience level?
 - Do company sizes correlate with job type and salary?
@@ -117,7 +117,7 @@ Now that we have ensured our data is clean and meaninful, we can begin our explo
 
 ## Exploring the data
 
-First, let's create a graph that visualizes the top 15 countries with the most remote workers.
+First, let's create a graph that visualizes the top 20 countries with the most remote workers.
 ```
 sns.set_palette('autumn')
 sns.set_style('whitegrid')
@@ -130,3 +130,79 @@ ax = sns.barplot(y=top_remote_locations.index, x=top_remote_locations, palette='
 ax.set_title('Countries With Most Remote Workers', fontdict={'fontsize': 14})
 plt.show()
 ```
+![Alt text](https://i.imgur.com/fHbkcRH.png)
+
+We discover that there are 12 countries where 100% of data scientists work remote. The next 5 countries with the highest percentage of remote workers lay somewhere between 80% and 100% with the last 3 operating between 60% to 80%.
+
+This leads us to our next question, 'Does experience level correlate with remote percentage?' We can use our data in a visualization to help us answer this.
+```
+# Finding the correlation between remote_percentage and experience_level
+
+exp_lvl_gb = df.groupby('experience_level')['remote_percentage'].mean().sort_values()
+
+ax = sns.barplot(x=exp_lvl_gb.index, y=exp_lvl_gb, order=['Entry-Level', 'Mid-Level', 'Senior-Level', 'Executive-Level'], data=df)
+ax.set_title('Experience Level Vs Mean Remote Percentage', fontdict={'fontsize': 14})
+plt.show()
+```
+![Alt text](https://i.imgur.com/eldvxTU.png)
+
+From this we can clearly see that all experience levels have a remote percentage of at least 60%. An interesting insight is that Mid-Level employees have the lowest remote percentage while Executive-Level employees have the highest, near 80%.
+
+Now let's visualize the data needed to answer the question of 'Have salary levels changed as the remote percentage has?'
+```
+# mean salary by year and job type
+mean_s_work_year = df.groupby('work_year')['salary'].mean().sort_values()
+fig, axes = plt.subplots(1,2)
+
+ax = sns.barplot(x=mean_s_work_year.index, y=mean_s_work_year, data=df, ax=axes[0])
+ax.set_title('Mean Salary VS Work Year', fontdict={'fontsize': 14})
+
+mean_s_remote_percentage_year = df.groupby('work_year')['remote_percentage'].mean().sort_values()
+ax = sns.barplot(x=mean_s_remote_percentage_year.index, y=mean_s_remote_percentage_year, data=df, ax=axes[1])
+ax.set_title('Mean Remote Percentage by Work Year', fontdict={'fontsize': 14})
+plt.show()
+```
+![Alt text](https://i.imgur.com/roilmvc.png)
+
+From the graphs we can see that from 2020-2022 both average remote percentage and mean salary have both increased. In the first graph we can see that in 2022 there was a significant increase in the average salary while remote percentage has increased by smaller margins. But, there is a clear upward trend for both margins.
+
+Which job types have the highest average salary and what is the distribution like?
+```
+# finding salary distribution by job_type and mean salary distribution by job_type
+df['remote_percentage'] = df['remote_percentage'].map({
+    100: 'Remote',
+    50: 'Hybrid',
+    0: 'In-Person'
+
+})
+
+df.rename(columns={'remote_percentage': 'job_type'}, inplace=True)
+mean_s_job_type = df.groupby('job_type')['salary'].mean().sort_values()
+
+fig, axes = plt.subplots(1,2)
+
+ax = sns.barplot(x=mean_s_job_type.index, y=mean_s_job_type, order=['In-Person', 'Hybrid', 'Remote'], ax=axes[0])
+ax.set_title('Mean Salary VS Job Type', fontdict={'fontsize': 14})
+
+ax = sns.violinplot(x='job_type', y='salary', data=df, order=['In-Person', 'Hybrid', 'Remote'], ax=axes[1])
+ax.set_title('Salary VS Job Type', fontdict={'fontsize': 14})
+plt.show()
+```
+![Alt text](https://i.imgur.com/hh2t1bL.png)
+
+It seems that hybrid workers have the lowest mean salary of about ~80000. Meanwhile, remote works recieve the highest salary of near ~120000. In the second graph we can see the distribution of salary by job type. Each job type seems to have an outlier that is much higher than the average with the highest value being a remote worker earning over 600000.
+
+Lets explore these values ploted while also including company size.
+```
+# comparing job_type and company_size to their salaries
+plt.figure(figsize=(15, 6))
+sns.set_palette('autumn')
+ax = sns.boxenplot(data=df, x='job_type', y='salary', order=['In-Person', 'Hybrid', 'Remote'], hue='company_size')
+ax.set_title('Job Type & Company Size VS Salary', fontdict={'fontsize': 14})
+plt.show()
+```
+![Alt text](https://i.imgur.com/Y6DVUFB.png)
+
+This visualization allows us to understand the outliers for each job type while also giving us insight into what size company they work for. We can see that remote workers seem to get the highest salaries while working for large companies. Meanwhile, hybrid workers get relatively low salaries with less variation. We can also easily spot the outliers within the data for each job type, and identify what size company they work for.
+
+## Conclusion
