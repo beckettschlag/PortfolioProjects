@@ -20,7 +20,7 @@ The objective of this project was to explore the data of COVID-19 infections and
 
 As someone seeking entry into the data science industry, I've always wondered what the advantages were of working remotely vs in-person or hybrid. Through this exploratory data analysis I sought out to answer a series of questions one might have in my position to understand the financial benefits of working remotely. I was able to create multiple graphs providing some key insight on what to expect during a job search in this field and what to expect in the future and come to a conclusion on which job type found the most success in their data science career.
 
-**Skills used**: Pandas, NumPy, Matplotlib, Seaborn, data cleaning, data visualization
+**Skills used**: Pandas, NumPy, Matplotlib, Seaborn, Data Cleaning, Data Visualization
 
 **[Nashville Housing Data Cleaning Queries](https://github.com/beckettschlag/PortfolioProjects/blob/main/Nashville%20Housing%20Data%20Cleaning%20Queries.sql)**
 
