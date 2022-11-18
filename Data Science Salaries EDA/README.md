@@ -5,7 +5,7 @@ Data from: [https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries](
 ## Context
 Data Science is the practice of using data to extract meaningful insights. It is a multidisciplinary field that combines the skills of mathematics, statistics and computer engineering among many others to achieve an organization's goals. This analysis is key in helping an organization answer questions and gain knowledge about this business practicies and how they can achieve their objective.
 
-The intended audience for this project are people curious about the advantages of remote work in data science.
+**The intended audience for this project are people curious about the advantages of remote work in data science.**
 
 ## Questions seeking answers:
 - Which countries have companies with the most remote workers?
