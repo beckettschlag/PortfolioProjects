@@ -5,6 +5,8 @@ Data from: [https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries](
 ## Context
 Data Science is the practice of using data to extract meaningful insights. It is a multidisciplinary field that combines the skills of mathematics, statistics and computer engineering among many others to achieve an organization's goals. This analysis is key in helping an organization answer questions and gain knowledge about this business practicies and how they can achieve their objective.
 
+The intended audience for this project are people curious about the advantages of remote work in data science.
+
 ## Questions seeking answers:
 - Which countries have companies with the most remote workers?
 - Does experience level correlate with remote percentage?
@@ -207,4 +209,4 @@ This visualization allows us to understand the outliers for each job type while 
 ## Conclusion
 Through our exploration we were able to get answers to all of our questions by visualizing our data with Python. We found that there are 12 countries with 100% remote workers and the following 8 were above 70%. Then, we were able to find that all experience levels except mid-level employees have a 70% remote percentage with executive-level employees nearing 80%. We also found that both average salaries and average remote percentages have increased significantly since 2020. Noteably, in 2022 average salaries have risen over $20,000. When investigated further we found that remote workers make the highest slary on average reaching $120,000 while hybrid workers earn the least on average at $80,000. We can also see the districution of these values for each job type and note some outliers. Finally, we learn that Remote workers have the largest variation in their salaries while hybrid workers have the least variation reguardless of their company size.
 
-Overll we can see that jobs within data science have a growing overage salary that allows their employees to work from home at an increasing rate. Those that work at the executive-level can expect to have the highest probablity of securing a job where they can work at home. Remote workers can expect to earn the highest salary despite their company size while hybrid workers can expect to make the least by a margin of over $20,000.
+Overll we can see that jobs within data science have a growing overage salary that allows their employees to work from home at an increasing rate. Those that work at the executive-level can expect to have the highest probablity of securing a job where they can work at home. Remote workers can expect to earn the highest salary despite their company size while hybrid workers can expect to make the least by a margin of over $20,000. **Therefore, we can determine that remote work has the best opportunities for an increased salary in multiple countries and company sizes.**
