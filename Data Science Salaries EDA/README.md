@@ -43,19 +43,19 @@ print('Unique values from company_size: \n', df.company_size.unique())
 ```
 
 From this, we learn a number of things: 
-- This data includes data science salary information from 2019-2022.
+- This data includes data science salary information from 2020-2022.
 - Experience level is categorized into four values:
   - EN - 'Entry-Level'
   - MI - 'Mid-Level'
   - SE - 'Senior-Level'
   - EX - Executive Level
-- There are many unique job titles within the dataset.
-- People working in data science live all over the world.
+- There are 50 unique job titles within the dataset.
+- People working in data science live in 57 unique countries.
 - This data categorizes remote percentage as In-Person, Hybrid, or Onsite with the corresponding values of 0, 50, or 100 respectively.
-- Companies employing data scientists are located all over the world.
-- A variety of small, medium, and large businesses are employing data scientists.
+- Companies employing data scientists are located in 50 unique countries.
+- Company sizes are broken down into three categories: small, medium, and large.
 
-We also learn that there are a number of columns that will not be useful to our exploration and there are repeated rows. There's also multiple values that could be more meaningful for our exploration. Let's remove the unused columns/rows, remove rows with duplicated data, and rename the values to be more meaningful.
+We also learn that there are a number of columns that will not be useful to our exploration and there are repeated rows. There's also multiple values that could be more meaningful for our exploration. Let's remove the unused columns, remove rows with duplicated data, and rename the values to be more meaningful.
 ```
 # Removing the redundant 'Unnamed: 0' column
 df.drop('Unnamed: 0', axis=1, inplace=True)
@@ -133,9 +133,22 @@ plt.show()
 ```
 ![Alt text](https://i.imgur.com/fHbkcRH.png)
 
-We discover that there are 12 countries where 100% of data scientists work remote. The next 5 countries with the highest percentage of remote workers lay somewhere between 80% and 100% with the last 3 operating between 60%-80%.
+We discover that there are 12 countries where 100% of data scientists work remote. The next 5 countries with the highest percentage of remote workers lay somewhere between 80% and 100% with the last 3 operating between 60%-80%. To find specifically what their remote percentage is lets run the following.
+```
+print(top_remote_locations[12:20])
+```
+| Country  | Remote Percentage |
+| ------------- | ------------- |
+| Spain  | 92.86  |
+| Netherlands  | 87.50  |
+| Greece  | 85.00  |
+| Luxembourg  | 83.33  |
+| Australia  | 83.33  |
+| United States  | 76.73  |
+| Slovenia  | 75.00  |
+| Czech Republic  | 75.00  |
 
-This leads us to our next question, 'Does experience level correlate with remote percentage?' We can use our data in a visualization to help us answer this.
+Now that we know the countries with the highest remote percentage lets explore the question, 'Does experience level correlate with remote percentage?' We can use our data in a visualization to help us answer this.
 ```
 # Finding the correlation between remote_percentage and experience_level
 
@@ -147,7 +160,7 @@ plt.show()
 ```
 ![Alt text](https://i.imgur.com/eldvxTU.png)
 
-From this we can clearly see that all experience levels have a remote percentage of at least 60%. An interesting insight is that Mid-Level employees have the lowest remote percentage while Executive-Level employees have the highest, near 80%.
+From this we can clearly see that all experience levels have a remote percentage of at least 60%. An interesting insight is that Mid-Level employees have the lowest remote percentage at 64.18%  while Executive-Level employees have the highest, at 78.85%.
 
 Now let's visualize the data needed to answer the question of 'Have salary levels changed as the remote percentage has?'
 ```
@@ -191,7 +204,7 @@ plt.show()
 ```
 ![Alt text](https://i.imgur.com/hh2t1bL.png)
 
-It seems that hybrid workers have the lowest mean salary of about ~$80,000. Meanwhile, remote works recieve the highest salary of near ~$120,000. In the second graph we can see the distribution of salary by job type. Each job type seems to have an outlier that is much higher than the average with the highest value being a remote worker earning over $600,000.
+It seems that hybrid workers have the lowest mean salary of $80,721.90. Meanwhile, remote works recieve the highest salary of $120,763.19. In the second graph we can see the distribution of salary by job type. Each job type seems to have an outlier that is much higher than the average with the highest value being a remote worker earning over $600,000.
 
 Lets explore these values ploted while also including company size.
 ```
