@@ -1,5 +1,5 @@
 # Data Analysis / Data Science / Business Analysis Portfolio - Beckett Schlag
-Hello, I am Beckett Schlag. I am a Senior in college pursuing a Economics BA degree. This Portfolio is a collection of projects I have completed across the fields of Data Analysis, Data Science, and Business Anaytics. This portfolio also contains my skills and certificates. It is updated on a regular basis. Contact me with any questions.
+Hello, I am Beckett Schlag. I am a graduate of the University of Delaware with a bachelor's degree in Economics. This Portfolio is a collection of projects I have completed across the fields of data analysis, data science, and business anaytics. This portfolio also contains my skills and certificates. It is updated regularly. Contact me with any questions.
 
 - **Email**: [beckettschlag@gmail.com](beckettschlag@gmail.com)
 - **LinkedIn**: [linkedin.com/in/beckettschlag](https://www.linkedin.com/in/beckettschlag/)
