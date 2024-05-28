@@ -9,6 +9,7 @@ Hello, I am Beckett Schlag. I am a graduate of the University of Delaware with a
 
 ## Projects
 **[Delaware Health Code Violations EDA](https://github.com/beckettschlag/PortfolioProjects/tree/main/Delaware%20Health%20Code%20Violations%20EDA)**
+
 The objective of this project is to clean, transform, and analyze data relating to health code relations in the state of Delaware to answer hypothetical questions you may be asked while working as a Data Analyst for the Department of Health. Through this project, we found which cities have the most health code violations, what kind of violations are most common, and any monthly trends among these violations. Through a series of visualizations, we were able to summarize our findings and find answers to our questions seeking answers.
 
 **Skills used**: Pandas, NumPy, Matplotlib, Seaborn, Data cleaning, Data Visualization, Data Transformation
