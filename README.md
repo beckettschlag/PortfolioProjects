@@ -8,6 +8,13 @@ Hello, I am Beckett Schlag. I am a graduate of the University of Delaware with a
 - Google Data Analytics Certification
 
 ## Projects
+**[Data Science Salary EDA](https://github.com/beckettschlag/PortfolioProjects/tree/main/Data%20Science%20Salaries%20EDA)**
+
+As someone seeking entry into the data science industry, I've always wondered what the advantages were of working remotely vs in-person or hybrid. Through this exploratory data analysis I sought out to answer a series of questions one might have in my position to understand the financial benefits of working remotely. I was able to create multiple graphs providing some key insight on what to expect during a job search in this field and what to expect in the future and come to a conclusion on which job type found the most success in their data science career.
+
+**Skills used**: Pandas, NumPy, Matplotlib, Seaborn, Data Cleaning, Data Visualization
+
+
 **[COVID-19 Data Exploration](https://github.com/beckettschlag/PortfolioProjects/blob/main/COVID-19%20Data%20Exploration.sql)**
 
 The objective of this project was to explore the data of COVID-19 infections and vaccinations by country and/or continent to understand how they were affected. After understanding how each country/continent was affected by COVID-19 I used SQL to find how they were affected by the release of a vaccine. I used these quries to create a dashboard comparing these statistics and predicting the potential future of the average percentage of the population infected.
@@ -16,11 +23,6 @@ The objective of this project was to explore the data of COVID-19 infections and
 
 **Skills used**: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 
-**[Data Science Salary EDA](https://github.com/beckettschlag/PortfolioProjects/tree/main/Data%20Science%20Salaries%20EDA)**
-
-As someone seeking entry into the data science industry, I've always wondered what the advantages were of working remotely vs in-person or hybrid. Through this exploratory data analysis I sought out to answer a series of questions one might have in my position to understand the financial benefits of working remotely. I was able to create multiple graphs providing some key insight on what to expect during a job search in this field and what to expect in the future and come to a conclusion on which job type found the most success in their data science career.
-
-**Skills used**: Pandas, NumPy, Matplotlib, Seaborn, Data Cleaning, Data Visualization
 
 **[Nashville Housing Data Cleaning Queries](https://github.com/beckettschlag/PortfolioProjects/blob/main/Nashville%20Housing%20Data%20Cleaning%20Queries.sql)**
 
