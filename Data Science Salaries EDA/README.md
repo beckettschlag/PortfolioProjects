@@ -186,7 +186,7 @@ plt.show()
 ```
 ![Alt text](https://i.imgur.com/roilmvc.png)
 
-From the graphs we can see that from 2020-2022 both average remote percentage and mean salary have both increased. In the first graph we can see that in 2022 there was a significant increase in the average salary while remote percentage has increased by smaller margins. But, there is a clear upward trend for both margins.
+From the graphs, we can see that from 2020-2022 both the average remote percentage and mean salary have increased. In the first graph, we can see that in 2022 there was a significant increase in the average salary while remote percentage has increased by smaller margins. But, there is a clear upward trend for both margins.
 
 Which job types have the highest average salary and what is the distribution like?
 ```
@@ -212,7 +212,7 @@ plt.show()
 ```
 ![Alt text](https://i.imgur.com/hh2t1bL.png)
 
-It seems that hybrid workers have the lowest mean salary of $80,721.90. Meanwhile, remote works recieve the highest salary of $120,763.19. In the second graph we can see the distribution of salary by job type. Each job type seems to have an outlier that is much higher than the average with the highest value being a remote worker earning over $600,000.
+It seems that hybrid workers have the lowest mean salary of $80,721.90. Meanwhile, remote workers receive the highest salary of $120,763.19. In the second graph we can see the distribution of salary by job type. Each job type seems to have an outlier that is much higher than the average with the highest value being a remote worker earning over $600,000.
 
 
 | Job Type  | Salary |
