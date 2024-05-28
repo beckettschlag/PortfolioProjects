@@ -65,7 +65,7 @@ df['Inspection_Date'] = pd.to_datetime(df['Inspection_Date'], format='%m/%d/%Y')
 df.Food_Establishment_Zip_Code = df.Food_Establishment_Zip_Code.astype(int)
 # print(df.dtypes)
 
-# -----
+# ----- Creating Visualizations
 
 # Creating Food_Establishment_City top 10 visualization
 top_cities = df['Food_Establishment_City'].value_counts().head(10)
