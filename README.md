@@ -8,6 +8,12 @@ Hello, I am Beckett Schlag. I am a graduate of the University of Delaware with a
 - Google Data Analytics Certification
 
 ## Projects
+**[Delaware Health Code Violations EDA](https://github.com/beckettschlag/PortfolioProjects/tree/main/Delaware%20Health%20Code%20Violations%20EDA)**
+The objective of this project is to clean, transform, and analyze data relating to health code relations in the state of Delaware to answer hypothetical questions you may be asked while working as a Data Analyst for the Department of Health. Through this project, we found which cities have the most health code violations, what kind of violations are most common, and any monthly trends among these violations. Through a series of visualizations, we were able to summarize our findings and find answers to our questions seeking answers.
+
+**Skills used**: Pandas, NumPy, Matplotlib, Seaborn, Data cleaning, Data Visualization, Data Transformation
+
+
 **[Data Science Salary EDA](https://github.com/beckettschlag/PortfolioProjects/tree/main/Data%20Science%20Salaries%20EDA)**
 
 As someone seeking entry into the data science industry, I've always wondered what the advantages were of working remotely vs in-person or hybrid. Through this exploratory data analysis I sought out to answer a series of questions one might have in my position to understand the financial benefits of working remotely. I was able to create multiple graphs providing some key insight on what to expect during a job search in this field and what to expect in the future and come to a conclusion on which job type found the most success in their data science career.
